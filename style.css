@@ -1,0 +1,170 @@
+/* Importar una fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --verde-selva: #2D5A27;
+    --amarillo-sol: #FFC300;
+    --azul-mar: #0077B6;
+    --arena: #F9F7F2;
+    --texto: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--arena);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Navegación Estilizada */
+nav {
+    background: white;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--verde-selva);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--azul-mar);
+}
+
+/* Secciones Generales */
+section {
+    padding: 100px 10%;
+    min-height: 60vh;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--verde-selva);
+    margin-bottom: 20px;
+    border-left: 5px solid var(--amarillo-sol);
+    padding-left: 15px;
+}
+
+/* Video de Presentación */
+header {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* Un gris más elegante o negro */
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Ajusta el contenedor del video */
+.video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* El video debe expandirse */
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que el video cubra todo el espacio sin dejar bordes grises */
+}
+
+/* Tarjetas de Descargas */
+.grid-descargas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.grid-descargas a {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--verde-selva);
+    border-radius: 10px;
+    border-bottom: 5px solid var(--amarillo-sol);
+    transition: transform 0.3s;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.grid-descargas a:hover {
+    transform: translateY(-10px);
+    background: var(--amarillo-sol);
+    color: white;
+}
+
+/* Formulario de Contacto */
+footer {
+    background: var(--verde-selva);
+    color: white;
+    padding: 50px 10%;
+}
+
+footer h2 {
+    color: white;
+    border-color: var(--azul-mar);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+form input, form button {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    background: var(--amarillo-sol);
+    color: var(--verde-selva);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Estilos para el efecto de aparición con JS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
